@@ -3,6 +3,12 @@ const TaskService = require('../../Services/TaskService');
 class TaskController {
     constructor() {
         this.taskService = TaskService;
+        // Bind all methods to preserve 'this' context
+        this.store = this.store.bind(this);
+        this.index = this.index.bind(this);
+        this.show = this.show.bind(this);
+        this.update = this.update.bind(this);
+        this.destroy = this.destroy.bind(this);
     }
 
     async store(req, res, next) {

@@ -11,21 +11,14 @@ class Application {
   }
 
   setup() {
-    // Middleware
     this.app.use(express.json());
-
     this.app.use('/api', apiRoutes);
-
-    // Error Handling
     this.app.use(errorHandler);
   }
 
   async boot() {
     try {
-      await mongoose.connect(config.database.mongo_uri, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-      });
+      await mongoose.connect(config.database.mongo_uri);
       console.log('Database connected successfully');
     } catch (error) {
       console.error('Database connection error:', error);
