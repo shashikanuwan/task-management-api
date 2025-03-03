@@ -7,7 +7,7 @@
    git clone git@github.com:shashikanuwan/task-management-api.git
    ```
    ```bash
-   task-management-api
+   cd task-management-api
    ```
 
 2. **Install dependencies**
