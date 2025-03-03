@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const config = require('../config/database');
-const apiRoutes = require('../Routes/api');
+const apiRoutes = require('../routes/api');
 const errorHandler = require('../app/Http/Middleware/ErrorHandler');
 
 class Application {
